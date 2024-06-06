@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebsiteKU</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+
+
+  </head>
+  <body id="top">
+    <nav>
+      <div class="nav-container">
+        <a class="nav-logo" href="index.html">
+          <img src="assets/logo.png" alt="Logo" />
+        </a>
+        <div class="hamburger" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <ul>
+          <li><a href="#home" class="nav-item">Home</a></li>
+          <li><a href="#facilities" class="nav-item">Our Profile</a></li>
+          <li><a href="#facilities" class="nav-item">Achievment</a></li>
+          <li><a href="#message-us" class="nav-item">Message US</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="welcome-popup">
+      <h1>
+        Selamat datang di Website Software Engineering, masukkan nama anda
+        terlebih dahulu!
+      </h1>
+      <input
+        type="text"
+        name="user"
+        id="user"
+        placeholder="Masukkan nama anda"
+        required
+      />
+      <input type="submit" name="submit" id="submit-user" />
+    </div>
+    <div class="overlay-blur"></div>
+
+    <section id="section-container">
+      <!-- Home -->
+      <section id="home" class="section-content">
+        <header>
+          <h1>
+            Hai, <span id="new-user"></span>! <br />Selamat Datang di Website
+            Software Engineering
+          </h1>
+        </header>
+        <article>
+          <p>
+            <span>Website Software Engineering membantu anda belajar
+            menjadi seorang programmer...</span>
+          </p>
+
+          <div class="banner-container">
+            <img class="img-slideshow" src="assets/banner-1.jpg" alt="" />
+            <img class="img-slideshow" src="assets/banner-2.jpg" alt="" />
+            <img class="img-slideshow" src="assets/banner-3.jpg" alt="" />
+          </div>
+        </article>
+      </section>
+
+      <hr />
+
+      <!-- Our Facilities -->
+      <section id="facilities" class="section-content">
+        <header>
+          <h1>Belajar coding assyiikkkk</h1>
+          <p>
+            <span>WebsiteKU menjadi online course terbesar di Indoniesia dan mendapat top global a world... </span>
+          </p>
+        </header>
+
+        <article class="facility-list">
+          <div>
+            <img src="assets/html.jpg" alt="" />
+            <div class="list-text">
+              <h2>HTML</h2>
+              <p>
+                HTML ipsum dolor sit amet, consectetur adipisicing elit. Hic 
+                <span>Ala Carte</span> consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <img src="assets/css.jpg" alt="" />
+            <div class="list-text">
+              <h2>CSS</h2>
+              <p>
+                CSS ipsum dolor sit amet, consectetur adipisicing elit. Hic 
+                <span>Ala Carte</span> consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <img src="assets/js.jpg" alt="" />
+            <div class="list-text">
+              <h2>Java Script</h2>
+              <p>
+                Java Script ipsum dolor sit amet, consectetur adipisicing elit. Hic 
+                <span>Ala Carte</span> consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <hr />
+      <!-- Message Us -->
+      <section id="message-us" class="section-content">
+        <header>
+          <h1>Hubungi Kami</h1>
+          <p>
+            Silahkan hubungi kami jika ingin mendaftar...
+          </p>
+        </header>
+
+        <section class="message-us-section">
+          <!-- form -->
+          <section class="form-message">
+            <form name="form-input" onsubmit="return displayResult()">
+              <table>
+                <tr class="input-form">
+                  <td>Nama</td>
+                  <td>:</td>
+                  <td>
+                    <input
+                      type="text"
+                      name="nama"
+                      id="nama"
+                      placeholder="Nama"
+                      class="input-tag tags"
+                    />
+                  </td>
+                </tr>
+                <tr class="input-form">
+                  <td>Tanggal Lahir</td>
+                  <td>:</td>
+                  <td>
+                    <input
+                      type="date"
+                      name="tgl_lahir"
+                      id="tgl_lahir"
+                      placeholder="Tanggal Lahir"
+                      class="input-tag tags"
+                    />
+                  </td>
+                </tr>
+                <tr class="input-form">
+                  <td>Jenis Kelamin</td>
+                  <td>:</td>
+                  <td>
+                    <input
+                      type="radio"
+                      name="jkel"
+                      value="Laki-laki"
+                      id="laki-laki"
+                    />
+                    <label>Laki-laki</label>
+                    <input
+                      type="radio"
+                      name="jkel"
+                      value="Perempuan"
+                      id="perempuan"
+                    />
+                    <label>Perempuan</label>
+                  </td>
+                </tr>
+                <tr class="input-form">
+                  <td>Pesan</td>
+                  <td>:</td>
+                  <td>
+                    <textarea
+                      name="pesan"
+                      id="pesan"
+                      placeholder="Pesan"
+                      class="input-tag tags"
+                    ></textarea>
+                  </td>
+                </tr>
+              </table>
+              <p id="error-msg"></p>
+              <input type="submit" value="Submit" class="submit" />
+            </form>
+          </section>
+
+          <!-- result -->
+          <section class="result-container">
+            <div id="form-result">
+              <p>
+                Current Time: <span id="current-date"></span>
+                <span id="current-time"></span>
+              </p>
+              <p>Nama: <span id="user-nama"></span></p>
+              <p>Tanggal Lahir: <span id="user-tgl-lahir"></span></p>
+              <p>Jenis Kelamin: <span id="user-jkel"></span></p>
+              <p>Pesan: <span id="user-pesan"></span></p>
+            </div>
+          </section>
+        </section>
+      </section>
+    </section>
+
+    <!--  Footer start-->
+    <footer>
+        <div >
+          <a href="#"><i data-feather="instagram"> </i></a>
+          <a href="#"><i data-feather="twitter"> </i></a>
+          <a href="#"><i data-feather="facebook"> </i></a>
+        </div>
+        
+          <h3>Created by Muhamad Yusup Al Huesaeni A. | &copy; 2024.</h3>
+        </div>
+      </footer>
+      <!--  Footer end-->
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
